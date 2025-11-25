@@ -60,15 +60,16 @@ The UI updates with title, ingredients, and image
 
 ## 🧰 Tech Stack
 
-| Technology                    | Purpose                                      |
-| ----------------------------- | -------------------------------------------- |
-| **HTML5**                     | Structure and semantic content of pages     |
-| **CSS3**                      | Styling, layout, and responsive design      |
-| **Bootstrap**                  | Grid system, UI components, responsive layout |
-| **Custom Fonts** *(optional)* | Enhance visual appearance and branding      |
-| **GitHub Pages** *(optional)* | Hosting the live demo of the project        |
-| **Icons / Images**             | Enhance UI and improve user experience      |
-| **Shields / Badges**           | Showcase project technologies and status    |
+| Technology                    | Purpose                                                                      |
+| ----------------------------- | ---------------------------------------------------------------------------- |
+| **HTML5**                     | Structure and semantic content of the web app                                |
+| **CSS3**                      | Styling, layout, and visual design                                           |
+| **Bootstrap**                 | Grid system, responsive layout, and UI components                            |
+| **JavaScript (ES6)**          | Core logic for random recipe generation using Functions, Objects, and Arrays |
+| **Icons / Images**            | Improve UI clarity and overall user experience                               |
+| **GitHub Pages**              | Hosting the live demo of the project                                         |
+| **Shields / Badges**          | Display project technologies and status visually                             |
+
 
 ---
 
@@ -91,17 +92,20 @@ What's-For-Dinner/
 ```
 
 ## 🎯 Goals
-- Build a **responsive gaming interface** compatible with desktops, tablets, and mobile devices.  
-- Apply **UI/UX principles** to ensure smooth navigation and an engaging user experience.  
-- Utilize **Bootstrap** for faster layout creation and consistent styling.  
-- Organize project files logically for scalability and maintenance.
+
+- Build a responsive recipe application that works smoothly across desktops, tablets, and mobile devices.
+- Use UI/UX best practices to deliver a simple, intuitive, and visually appealing cooking experience.
+- Utilize Bootstrap to speed up layout creation and ensure consistent, responsive styling.
+- Implement JavaScript functions, objects, and arrays to generate random recipes dynamically.
+- Organize project files cleanly to improve scalability, readability, and future updates.
 
 ---
 
 ## 🛠️ Technologies Used
 - **HTML5** – Semantic markup for structured content  
 - **CSS3** – Styling and layout design  
-- **Bootstrap** – Responsive grid system and UI components  
+- **Bootstrap** – Responsive grid system and UI components
+- **script.js - Random recipe generator logic
 - Project structure:
 
 ---
