@@ -140,7 +140,7 @@ You are free to modify, reuse, and build upon it for personal or commercial use.
 👉 **View the Dashboard Online:**
 
 ```
-mohamedsaadat.github.io/What's-For-Dinner/
+https://mohamedsaadat.github.io/What-s-For-Dinner/
 ```
 
 ## 📧 Contact
