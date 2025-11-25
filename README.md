@@ -1,4 +1,4 @@
-🍽️ What's For Dinner
+## 🍽️ What's For Dinner
 
 A dynamic and responsive web application that generates random food recipes using HTML, CSS, Bootstrap, and JavaScript.
 The app allows users to discover new meals with one click using structured JavaScript (Functions, Objects, Arrays).
@@ -34,7 +34,7 @@ Create a clean and user-friendly experience
 
 ---
 
-🔧 How It Works (JavaScript Logic)
+## 🔧 How It Works (JavaScript Logic)
 
 Recipes are stored as objects inside an array
 
@@ -46,7 +46,7 @@ The UI updates with title, ingredients, and image
 
 ---
 
-🎨 Features
+## 🎨 Features
 
 🍽️ Random recipe generator
 
