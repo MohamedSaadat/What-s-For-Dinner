@@ -105,7 +105,7 @@ What's-For-Dinner/
 - **HTML5** – Semantic markup for structured content  
 - **CSS3** – Styling and layout design  
 - **Bootstrap** – Responsive grid system and UI components
-- **script.js - Random recipe generator logic
+- **script.js** - Random recipe generator logic
 - Project structure:
 
 ---
