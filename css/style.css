@@ -1,0 +1,82 @@
+/* --------------------------- global rules ------------------------------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #364153;
+  list-style: none;
+  line-height: 1.5;
+}
+body::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+/* colors */
+:root {
+  --primary-color: #ff5b00;
+}
+/* ----------------------------------------------------------------- */
+/* --------------------------- tags ------------------------------- */
+img {
+  width: 100%;
+}
+/* ----------------------------------------------------------------- */
+/* --------------------------- navbar ------------------------------- */
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  box-shadow: 0 -1px 5px 0 #00000047;
+}
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active,
+.navbar-brand {
+  color: #364153;
+}
+.logo .icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--primary-color);
+}
+.logo .text span:nth-child(1) {
+  font-size: 1.5rem;
+}
+.logo .text span:nth-child(2) {
+  font-size: 0.875rem;
+  line-height: 1;
+}
+.navbar .navbar-collapse .navbar-nav {
+  margin-left: auto;
+  width: fit-content;
+}
+.navbar-collapse .user {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid var(--primary-color);
+}
+.navbar-collapse .nav-link i {
+  font-size: 1.125rem;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+}
+.navbar-collapse .nav-link:hover i {
+  color: var(--primary-color);
+}
+/* ----------------------------------------------------------------- */
+/* -------------------------- main ------------------------------- */
+main {
+  background-color: #fffbea;
+  height: 100vh;
+}
+/* ----------------------------------------------------------------- */
