@@ -1,7 +1,7 @@
-# 🎮 Games-Arena
+🍽️ What's For Dinner
 
-**Games-Arena** is an interactive web platform showcasing a collection of simple games, built using **HTML5**, **CSS3**, and **Bootstrap**.  
-This project demonstrates a clean, responsive design and front-end development best practices.
+A dynamic and responsive web application that generates random food recipes using HTML, CSS, Bootstrap, and JavaScript.
+The app allows users to discover new meals with one click using structured JavaScript (Functions, Objects, Arrays).
 
 ---
 
@@ -10,8 +10,6 @@ This project demonstrates a clean, responsive design and front-end development b
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=fff)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=fff)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=000)
-![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=fff)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-green?style=for-the-badge)
 ![License-MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
@@ -19,29 +17,44 @@ This project demonstrates a clean, responsive design and front-end development b
 
 ---
 
-## 🖥️ Live Demo
-
-👉 **View the Dashboard Online:**
-
-```
-mohamedsaadat.github.io/Games-Arena/
-```
-
 ## 📌 Project Overview
-Games-Arena is a front-end web project designed to host multiple small games in a single platform.  
-The main goal is to create an **intuitive, responsive, and visually appealing user interface** while practicing web design fundamentals.
+
+What's For Dinner is a lightweight web app that helps users pick a random meal idea with just one click.
+Recipes are stored as JavaScript objects inside arrays, and meals are selected randomly using core JS logic.
+
+The purpose of the project:
+
+Practice DOM manipulation
+
+Use Functions, Objects, and Arrays
+
+Explore UI layout using Bootstrap
+
+Create a clean and user-friendly experience
 
 ---
 
-## 🚀 Features
+🔧 How It Works (JavaScript Logic)
 
-* 🎮 **Collection of simple games** in one platform  
-* 📱 **Fully responsive layout** for desktop, tablet, and mobile  
-* 🎨 **Clean and modern UI design** using HTML, CSS & Bootstrap  
-* 🧱 **Modular structure** for easily adding new games or pages  
-* 📝 **Easy-to-edit CSS and HTML** for customization  
-* ⚡ **Lightweight & fast** – no heavy dependencies  
-* 🔧 **Beginner-friendly** and perfect for practicing front-end development
+Recipes are stored as objects inside an array
+
+A random index is selected using Math.random()
+
+The selected object is shown dynamically on the page
+
+The UI updates with title, ingredients, and image
+
+---
+
+🎨 Features
+
+🍽️ Random recipe generator
+
+⚡ JavaScript-powered logic using Functions & Arrays
+📱 Fully responsive UI with Bootstrap
+🧩 Simple and clean code structure
+🎯 Beginner-friendly and customizable
+🎨 Modern layout with good typography
 
 ---
 
@@ -62,23 +75,19 @@ The main goal is to create an **intuitive, responsive, and visually appealing us
 ## 📁 Project Structure
 
 ```
-Games-Arena/
+What's-For-Dinner/
 │
-├── index.html # Main landing page with game menu
+├── index.html                # Main application page
 │
-├── /css # Stylesheets for the entire project
-│ └── styles.css # Main CSS file for layout, design, and responsiveness
+├── /css
+│   └── style.css             # Custom styles
 │
-├── /images # All visual assets
-│ ├── icons/ # Icons for UI elements
-│ └── games/ # Game-specific images/screenshots
+├── /js
+│   └── script.js             # Random recipe generator logic
 │
-├── /webfonts # Custom fonts (optional)
+├── /images                   # Dish images (optional)
 │
-└── /games # Individual HTML files for each game
-├── game1.html
-├── game2.html
-└── ... # Add more games as needed
+└── README.md                 # Project documentation
 ```
 
 ## 🎯 Goals
@@ -102,7 +111,7 @@ Games-Arena/
 ### **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/MohamedSaadat/Games-Arena.git
+git clone https://github.com/MohamedSaadat/Whats-For-Dinner.git
 ```
 
 ### **2. Open the Project**
@@ -121,6 +130,14 @@ This project is licensed under the **MIT License**.
 You are free to modify, reuse, and build upon it for personal or commercial use.
 
 ---
+
+## 🖥️ Live Demo
+
+👉 **View the Dashboard Online:**
+
+```
+mohamedsaadat.github.io/What's-For-Dinner/
+```
 
 ## 📧 Contact
 
