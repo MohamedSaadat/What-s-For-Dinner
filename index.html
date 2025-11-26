@@ -33,42 +33,37 @@
                     </div>
                 </div>
 
-                <!-- انا حاولت اغير فى media معرفتش هو المفروض يظهر على 768 مش 992 -->
-
                 <!-- navbar-toggler -->
+                <!-- انا حاولت اغير فى media معرفتش هو المفروض يظهر على 768 مش 992 -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
 
                 <!-- navbar-collapse -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link position-relative" aria-current="page" href="#">
+                        <li class="nav-item position-relative">
+                            <a class="nav-link" aria-current="page" href="#">
                                 <i class="fa-solid fa-bookmark"></i>
-                                <span>Saved Recipes</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link position-relative" href="#">
+                        <li class="nav-item position-relative">
+                            <a class="nav-link" href="#">
                                 <i class="fa-solid fa-clock-rotate-left"></i>
-                                <span>Recent</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link position-relative" href="#">
+                        <li class="nav-item position-relative">
+                            <a class="nav-link" href="#">
                                 <i class="fa-solid fa-gear"></i>
-                                <span>Settings</span>
                             </a>
                         </li>
                         <!-- user -->
-                        <li class="nav-item">
-                            <a class="nav-link position-relative" href="#">
+                        <li class="nav-item position-relative">
+                            <a class="nav-link" href="#">
                                 <div class="user rounded rounded-circle">
                                     <img class="rounded rounded-circle" src="images/avatar-4.jpg" alt="">
                                 </div>
-                                <span>Profile</span>
                             </a>
                         </li>
                     </ul>
@@ -78,7 +73,102 @@
     </header>
 
     <!-- main -->
-    <main></main>
+    <main class="vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row bg-white">
+                <!-- image -->
+                <div class="col-12 col-lg-4">
+                    <div class="image d-flex align-items-center justify-content-center"></div>
+                </div>
+
+                <!-- content -->
+                <div class="col-12 col-lg-8">
+                    <div class="content p-5">
+
+                        <!-- rounded-pill-span -->
+                        <div class="rounded-pill-span d-flex align-items-center gap-3 mb-2">
+                            <span class="rounded-pill bg-success-subtle px-3 py-1 text-success fw-semibold">text</span>
+                            <span class="rounded-pill bg-primary-subtle px-3 py-1 text-primary fw-semibold">text</span>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h1>Lorem, ipsum dolor.</h1>
+                            <div class="icon d-flex">
+                                <div class="rounded rounded-3 me-2">
+                                    <i class="fa-solid fa-bookmark"></i>
+                                </div>
+                                <div class="rounded rounded-3">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="fs-18">Lorem ipsum dolor sit amet consectetur.</p>
+
+                        <!-- Extended Preparation Time -->
+                        <div
+                            class="extended-preparation-time rounded rounded-3 bg-danger-subtle d-flex align-items-center gap-3 p-3">
+                            <div class="icon">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <div class="text">
+                                <p class="fw-semibold m-0">Extended Preparation Time</p>
+                                <span class="fs-14 text-danger">This recipe requires more than 45 minutes to prepare.
+                                    Plan accordingly!</span>
+                            </div>
+                        </div>
+
+                        <!-- tab-content -->
+                        <div>
+                            <nav>
+                                <div class="nav nav-tabs justify-content-center mt-3" id="nav-tab" role="tablist">
+                                    <button class="nav-link active position-relative" id="nav-Frontend-tab"
+                                        data-bs-toggle="tab" data-bs-target="#nav-Frontend" type="button" role="tab"
+                                        aria-controls="nav-Frontend" aria-selected="true">
+                                        <i class="fa-solid fa-code"></i>
+                                        Frontend</button>
+                                    <button class="nav-link position-relative" id="nav-Backend-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-Backend" type="button" role="tab"
+                                        aria-controls="nav-Backend" aria-selected="false">
+                                        <i class="fa-solid fa-server"></i>
+                                        Backend</button>
+                                    <button class="nav-link position-relative" id="nav-Mobile-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-Mobile" type="button" role="tab" aria-controls="nav-Mobile"
+                                        aria-selected="false">
+                                        <i class="fa-solid fa-mobile"></i>
+                                        Mobile</button>
+                                    <button class="nav-link position-relative" id="nav-Cloud-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-Cloud" type="button" role="tab" aria-controls="nav-Cloud"
+                                        aria-selected="false">
+                                        <i class="fa-solid fa-cloud"></i>
+                                        Cloud &amp; DevOps</button>
+                                    <button class="nav-link position-relative" id="nav-Database-tab"
+                                        data-bs-toggle="tab" data-bs-target="#nav-Database" type="button" role="tab"
+                                        aria-controls="nav-Database" aria-selected="false">
+                                        <i class="fa-solid fa-database"></i>
+                                        Database</button>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <!-- Frontend -->
+                                <div class="tab-pane fade show active" id="nav-Frontend" role="tabpanel"
+                                    aria-labelledby="nav-Frontend-tab" tabindex="0">
+                                    Frontend
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- button -->
+                        <div class="button pt-4">
+                            <button class="border-0 rounded rounded-3">
+                                <i class="fa-solid fa-rotate"></i>
+                                Try Another Recipe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
