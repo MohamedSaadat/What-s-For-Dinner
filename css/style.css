@@ -12,7 +12,6 @@ body {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #364153;
-  list-style: none;
 }
 body::selection {
   background-color: var(--primary-color);
@@ -22,6 +21,42 @@ body::selection {
 :root {
   --primary-color: #ff5b00;
 }
+.bg-blue-100 {
+  background-color: oklch(93.2% 0.032 255.585);
+}
+.bg-orange-100 {
+  background-color: oklch(95.4% 0.038 75.164);
+}
+.bg-yellow-100 {
+  background-color: oklch(97.3% 0.071 103.193);
+}
+.bg-green-100 {
+  background-color: oklch(96.2% 0.044 156.743);
+}
+.bg-red-100 {
+  background-color: oklch(93.6% 0.032 17.717);
+}
+.bg-pink-100 {
+  background-color: oklch(94.8% 0.028 342.258);
+}
+.text-pink-600 {
+  color: oklch(59.2% 0.249 0.584);
+}
+.text-red-600 {
+  color: oklch(57.7% 0.245 27.325);
+}
+.text-blue-600 {
+  color: oklch(54.6% 0.245 262.881);
+}
+.text-orange-600 {
+  color: var(--primary-color);
+}
+.text-yellow-600 {
+  color: oklch(68.1% 0.162 75.834);
+}
+.text-green-600 {
+  color: oklch(62.7% 0.194 149.214);
+}
 /* ----------------------------------------------------------------- */
 /* --------------------------- tags ------------------------------- */
 img {
@@ -29,11 +64,17 @@ img {
 }
 /* ----------------------------------------------------------------- */
 /* -------------------------- spatial class ------------------------- */
-.fs-14{
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
   font-size: 14px;
 }
-.fs-18{
+.fs-18 {
   font-size: 18px;
+}
+.fs-24 {
+  font-size: 24px;
 }
 /* ----------------------------------------------------------------- */
 /* --------------------------- navbar ------------------------------- */
@@ -73,7 +114,7 @@ header {
   font-size: 1.125rem;
 }
 .navbar-collapse .nav-item,
-.navbar-collapse .nav-link i{
+.navbar-collapse .nav-link i {
   transition: 0.2s ease-in-out;
   -webkit-transition: 0.2s ease-in-out;
   -moz-transition: 0.2s ease-in-out;
@@ -82,69 +123,96 @@ header {
   cursor: pointer;
 }
 .navbar-collapse .nav-item:hover i,
-.navbar-collapse .nav-item:hover{
+.navbar-collapse .nav-item:hover {
   color: var(--primary-color);
 }
 .navbar-collapse .navbar-nav .nav-item:nth-child(1):after,
 .navbar-collapse .navbar-nav .nav-item:nth-child(2):after,
 .navbar-collapse .navbar-nav .nav-item:nth-child(3):after,
-.navbar-collapse .navbar-nav .nav-item:nth-child(4):after{
+.navbar-collapse .navbar-nav .nav-item:nth-child(4):after {
   position: absolute;
   top: 3px;
   left: 40px;
   width: 100px;
 }
-.navbar-collapse .navbar-nav .nav-item:nth-child(1):after{
+.navbar-collapse .navbar-nav .nav-item:nth-child(1):after {
   content: "Saved Recipes";
 }
-.navbar-collapse .navbar-nav .nav-item:nth-child(2):after{
+.navbar-collapse .navbar-nav .nav-item:nth-child(2):after {
   content: "Recent";
 }
-.navbar-collapse .navbar-nav .nav-item:nth-child(3):after{
+.navbar-collapse .navbar-nav .nav-item:nth-child(3):after {
   content: "Settings";
 }
-.navbar-collapse .navbar-nav .nav-item:nth-child(4):after{
+.navbar-collapse .navbar-nav .nav-item:nth-child(4):after {
   content: "Profile";
   top: 10px;
 }
-.navbar-toggler .fa-bars{
+.navbar-toggler .fa-bars {
   font-size: 24px;
-  transition: .2s ease-in-out;
-  -webkit-transition: .2s ease-in-out;
-  -moz-transition: .2s ease-in-out;
-  -ms-transition: .2s ease-in-out;
-  -o-transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
 }
-.navbar-toggler .fa-bars:hover{
+.navbar-toggler .fa-bars:hover {
   color: var(--primary-color);
 }
 /* ----------------------------------------------------------------- */
 /* -------------------------- main ------------------------------- */
-main {
+main,
+main .tab-content .Ingredients {
   background-color: #fffbea;
 }
-/* content */
-main span[class*="rounded-pill"]{
-  font-size: .75rem
+main {
+  min-height: 100vh;
+  padding: 100px 0 50px;
 }
-main h1{
+main .row[class="row bg-white rounded rounded-5"] {
+  box-shadow: 0 10px 15px 0px #8080803d;
+}
+/* image */
+main div[class="position-relative h-100"] .rounded-pill{
+  top: 32px;
+  left: 32px;
+}
+main .info{
+  width: 90%;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+main .image img{
+  object-fit: cover;
+}
+/* content */
+main span[class*="rounded-pill"] {
+  font-size: 0.75rem;
+}
+main h1 {
   font-size: 2.25rem;
   font-weight: 700;
-}main .content .icon div[class*="rounded rounded-3"]{
+}
+main .content .icon div[class*="rounded rounded-3"] {
   color: var(--primary-color);
   background-color: #ffedd4;
-  padding: .875rem;
+  padding: 0.875rem;
 }
-.extended-preparation-time{
+.extended-preparation-time {
   border-left: 5px solid #fb2c36;
 }
-.extended-preparation-time i{
+.extended-preparation-time i {
   color: #fb2c36;
 }
-.extended-preparation-time p{
+.extended-preparation-time p {
   color: #9f0712;
 }
-main .nav-tabs{
+main .nav-tabs {
   padding-bottom: 16px;
   margin-bottom: 16px;
 }
@@ -161,25 +229,81 @@ main .nav-tabs .nav-link.active {
   color: var(--primary-color);
   border-bottom: 2px solid;
 }
-main .button{
+main .button {
   border-top: 1px solid #80808042;
 }
-main button{
-  background: linear-gradient(270deg,rgba(251, 47, 54, 1) 0%, rgba(255, 105, 0, 1) 100%);
+main button {
+  background: linear-gradient(
+    270deg,
+    rgba(251, 47, 54, 1) 0%,
+    rgba(255, 105, 0, 1) 100%
+  );
   padding: 12px 24px;
   color: white;
   font-weight: 600;
-  transition: .2s ease-in-out;
-  -webkit-transition: .2s ease-in-out;
-  -moz-transition: .2s ease-in-out;
-  -ms-transition: .2s ease-in-out;
-  -o-transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
 }
-main button:hover{
+main button:hover {
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
+}
+main .nav.nav-tabs {
+  gap: 32px;
+}
+main ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+main .tab-pane {
+  height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ff813e #ffedd4;
+}
+main .tab-pane.active {
+}
+/* Ingredients */
+main .Ingredients .number {
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-color);
+  color: white;
+}
+/* Instructions */
+main .Instructions .number {
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: white;
+}
+/* Nutrition */
+main .Nutrition .icon {
+  width: 60px;
+  height: 48px;
+  font-size: 18px;
+}
+main .Nutrition li {
+  background-color: #f9fafb;
+}
+/* ChefsTips */
+main .ChefsTips .tip {
+  background-color: #fffbeb;
+  border-left: 5px solid var(--primary-color);
+}
+main .ChefsTips .icon {
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-color);
+  color: white;
 }
 /* ----------------------------------------------------------------- */

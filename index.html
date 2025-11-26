@@ -34,7 +34,6 @@
                 </div>
 
                 <!-- navbar-toggler -->
-                <!-- انا حاولت اغير فى media معرفتش هو المفروض يظهر على 768 مش 992 -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
@@ -73,16 +72,46 @@
     </header>
 
     <!-- main -->
-    <main class="vh-100 d-flex align-items-center">
+    <main>
         <div class="container">
-            <div class="row bg-white">
+            <div class="row bg-white rounded rounded-5 overflow-hidden">
                 <!-- image -->
-                <div class="col-12 col-lg-4">
-                    <div class="image d-flex align-items-center justify-content-center"></div>
+                <div class="p-0 col-12 col-xl-4">
+                    <div class="position-relative h-100">
+                        <div class="rounded-pill bg-white position-absolute py-2 px-3">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <span class="fw-bold mx-1">#num</span>
+                            <span class="fs-14">text</span>
+                        </div>
+                        <div class="image h-100">
+                            <img class="h-100" src="images/photo-1455619452474-d2be8b1e70cd.jpg" alt="">
+                        </div>
+                        <div
+                            class="info position-absolute rounded rounded-4 d-flex align-items-center justify-content-around p-4 bg-white">
+                            <!-- Prep Time -->
+                            <div class="text-center">
+                                <i class="fa-solid fa-clock text-orange-600 fs-24"></i>
+                                <span class="d-block fs-14">Prep Time</span>
+                                <span class="d-block fw-bold">#num</span>
+                            </div>
+                            <!-- Cook Time -->
+                            <div class="text-center">
+                                <i class="fa-solid fa-fire-burner text-red-600 fs-24"></i>
+                                <span class="d-block fs-14">Cook Time</span>
+                                <span class="d-block fw-bold">#num</span>
+                            </div>
+                            <!-- Servings -->
+                            <div class="text-center">
+                                <i class="fa-solid fa-users text-blue-600 fs-24"></i>
+                                <span class="d-block fs-14">Servings</span>
+                                <span class="d-block fw-bold">#num</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- content -->
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-xl-8">
                     <div class="content p-5">
 
                         <!-- rounded-pill-span -->
@@ -121,38 +150,302 @@
                         <div>
                             <nav>
                                 <div class="nav nav-tabs justify-content-center mt-3" id="nav-tab" role="tablist">
-                                    <button class="nav-link active position-relative" id="nav-Frontend-tab"
-                                        data-bs-toggle="tab" data-bs-target="#nav-Frontend" type="button" role="tab"
-                                        aria-controls="nav-Frontend" aria-selected="true">
-                                        <i class="fa-solid fa-code"></i>
-                                        Frontend</button>
-                                    <button class="nav-link position-relative" id="nav-Backend-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-Backend" type="button" role="tab"
-                                        aria-controls="nav-Backend" aria-selected="false">
-                                        <i class="fa-solid fa-server"></i>
-                                        Backend</button>
-                                    <button class="nav-link position-relative" id="nav-Mobile-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-Mobile" type="button" role="tab" aria-controls="nav-Mobile"
-                                        aria-selected="false">
-                                        <i class="fa-solid fa-mobile"></i>
-                                        Mobile</button>
-                                    <button class="nav-link position-relative" id="nav-Cloud-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-Cloud" type="button" role="tab" aria-controls="nav-Cloud"
-                                        aria-selected="false">
-                                        <i class="fa-solid fa-cloud"></i>
-                                        Cloud &amp; DevOps</button>
-                                    <button class="nav-link position-relative" id="nav-Database-tab"
-                                        data-bs-toggle="tab" data-bs-target="#nav-Database" type="button" role="tab"
-                                        aria-controls="nav-Database" aria-selected="false">
-                                        <i class="fa-solid fa-database"></i>
-                                        Database</button>
+                                    <!-- Ingredients -->
+                                    <button class="nav-link active position-relative" id="nav-Ingredients-tab"
+                                        data-bs-toggle="tab" data-bs-target="#nav-Ingredients" type="button" role="tab"
+                                        aria-controls="nav-Ingredients" aria-selected="true">
+                                        <i class="fa-solid fa-list-check"></i>
+                                        Ingredients
+                                    </button>
+
+                                    <!-- Instructions -->
+                                    <button class="nav-link position-relative" id="nav-Instructions-tab"
+                                        data-bs-toggle="tab" data-bs-target="#nav-Instructions" type="button" role="tab"
+                                        aria-controls="nav-Instructions" aria-selected="false">
+                                        <i class="fa-solid fa-book-open"></i>
+                                        Instructions
+                                    </button>
+
+                                    <!-- Nutrition -->
+                                    <button class="nav-link position-relative" id="nav-Nutrition-tab"
+                                        data-bs-toggle="tab" data-bs-target="#nav-Nutrition" type="button" role="tab"
+                                        aria-controls="nav-Nutrition" aria-selected="false">
+                                        <i class="fa-solid fa-chart-pie"></i>
+                                        Nutrition
+                                    </button>
+
+                                    <!-- Chef's Tips -->
+                                    <button class="nav-link position-relative" id="nav-ChefsTips-tab"
+                                        data-bs-toggle="tab" data-bs-target="#nav-ChefsTips" type="button" role="tab"
+                                        aria-controls="nav-ChefsTips" aria-selected="false">
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                        Chef's Tips
+                                    </button>
                                 </div>
                             </nav>
-                            <div class="tab-content" id="nav-tabContent">
-                                <!-- Frontend -->
-                                <div class="tab-pane fade show active" id="nav-Frontend" role="tabpanel"
-                                    aria-labelledby="nav-Frontend-tab" tabindex="0">
-                                    Frontend
+                            <div class="tab-content mb-3" id="nav-tabContent">
+                                <!-- Ingredients -->
+                                <div class="tab-pane fade show active" id="nav-Ingredients" role="tabpanel"
+                                    aria-labelledby="nav-Ingredients-tab" tabindex="0">
+                                    <div class="Ingredients rounded rounded-4 p-3">
+                                        <ul>
+                                            <li class="mb-2 d-flex align-items-center gap-2">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-circle">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-2 d-flex align-items-center gap-2">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-circle">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-2 d-flex align-items-center gap-2">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-circle">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-2 d-flex align-items-center gap-2">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-circle">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-2 d-flex align-items-center gap-2">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-circle">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-2 d-flex align-items-center gap-2">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-circle">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-2 d-flex align-items-center gap-2">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-circle">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-2 d-flex align-items-center gap-2">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-circle">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="d-flex align-items-center gap-2">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-circle">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Instructions -->
+                                <div class="tab-pane fade show" id="nav-Instructions" role="tabpanel"
+                                    aria-labelledby="nav-Instructions-tab" tabindex="0">
+                                    <div class="Instructions m-3">
+                                        <ul>
+                                            <li class="mb-3 d-flex align-items-center gap-3">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-4">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-3 d-flex align-items-center gap-3">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-4">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-3 d-flex align-items-center gap-3">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-4">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-3 d-flex align-items-center gap-3">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-4">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-3 d-flex align-items-center gap-3">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-4">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-3 d-flex align-items-center gap-3">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-4">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-3 d-flex align-items-center gap-3">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-4">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="mb-3 d-flex align-items-center gap-3">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-4">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                            <li class="d-flex align-items-center gap-3">
+                                                <div
+                                                    class="number d-flex align-items-center justify-content-center rounded rounded-4">
+                                                    1</div>
+                                                <div class="text">Lorem ipsum dolor sit amet.</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Nutrition -->
+                                <div class="tab-pane fade show" id="nav-Nutrition" role="tabpanel"
+                                    aria-labelledby="nav-Nutrition-tab" tabindex="0">
+                                    <div class="Nutrition row m-3">
+                                        <!-- col #1 -->
+                                        <div class="col-12 col-lg-6">
+                                            <ul>
+                                                <!-- Calories -->
+                                                <li
+                                                    class="mb-3 d-flex align-items-center gap-3 bg-Secondary-subtle rounded rounded-4 pe-3 p-2">
+                                                    <div
+                                                        class="icon bg-orange-100 d-flex align-items-center justify-content-center rounded rounded-4">
+                                                        <i class="fa-solid fa-fire text-orange-600"></i>
+                                                    </div>
+                                                    <div
+                                                        class="text w-100 d-flex align-items-center justify-content-between">
+                                                        <span>Calories</span>
+                                                        <span class="fs-18 fw-bold">#num</span>
+                                                    </div>
+                                                </li>
+                                                <!-- Carbohydrates -->
+                                                <li
+                                                    class="mb-3 d-flex align-items-center gap-3 bg-Secondary-subtle rounded rounded-4 pe-3 p-2">
+                                                    <div
+                                                        class="icon bg-yellow-100 d-flex align-items-center justify-content-center rounded rounded-4">
+                                                        <i class="fa-solid fa-wheat-awn text-yellow-600"></i>
+                                                    </div>
+                                                    <div
+                                                        class="text w-100 d-flex align-items-center justify-content-between">
+                                                        <span>Carbohydrates</span>
+                                                        <span class="fs-18 fw-bold">#num</span>
+                                                    </div>
+                                                </li>
+                                                <!-- Fiber -->
+                                                <li
+                                                    class="mb-3 d-flex align-items-center gap-3 bg-Secondary-subtle rounded rounded-4 pe-3 p-2">
+                                                    <div
+                                                        class="icon bg-green-100 d-flex align-items-center justify-content-center rounded rounded-4">
+                                                        <i class="fa-solid fa-seedling text-green-600"></i>
+                                                    </div>
+                                                    <div
+                                                        class="text w-100 d-flex align-items-center justify-content-between">
+                                                        <span>Fiber</span>
+                                                        <span class="fs-18 fw-bold">#num</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- col #2 -->
+                                        <div class="col-12 col-lg-6">
+                                            <ul>
+                                                <!-- Protein -->
+                                                <li
+                                                    class="mb-3 d-flex align-items-center gap-3 bg-Secondary-subtle rounded rounded-4 pe-3 p-2">
+                                                    <div
+                                                        class="icon bg-blue-100 d-flex align-items-center justify-content-center rounded rounded-4">
+                                                        <i class="fa-solid fa-dumbbell text-blue-600"></i>
+                                                    </div>
+                                                    <div
+                                                        class="text w-100 d-flex align-items-center justify-content-between">
+                                                        <span>Protein</span>
+                                                        <span class="fs-18 fw-bold">#num</span>
+                                                    </div>
+                                                </li>
+                                                <!-- Fat -->
+                                                <li
+                                                    class="mb-3 d-flex align-items-center gap-3 bg-Secondary-subtle rounded rounded-4 pe-3 p-2">
+                                                    <div
+                                                        class="icon bg-red-100 d-flex align-items-center justify-content-center rounded rounded-4">
+                                                        <i class="fa-solid fa-droplet text-red-600"></i>
+                                                    </div>
+                                                    <div
+                                                        class="text w-100 d-flex align-items-center justify-content-between">
+                                                        <span>Fat</span>
+                                                        <span class="fs-18 fw-bold">#num</span>
+                                                    </div>
+                                                </li>
+                                                <!-- Sodium -->
+                                                <li
+                                                    class="mb-3 d-flex align-items-center gap-3 bg-Secondary-subtle rounded rounded-4 pe-3 p-2">
+                                                    <div
+                                                        class="icon bg-pink-100 d-flex align-items-center justify-content-center rounded rounded-4">
+                                                        <i class="fa-solid fa-cube text-pink-600"></i>
+                                                    </div>
+                                                    <div
+                                                        class="text w-100 d-flex align-items-center justify-content-between">
+                                                        <span>Sodium</span>
+                                                        <span class="fs-18 fw-bold">#num</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ChefsTips -->
+                                <div class="tab-pane fade show" id="nav-ChefsTips" role="tabpanel"
+                                    aria-labelledby="nav-ChefsTips-tab" tabindex="0">
+                                    <div class="ChefsTips m-3">
+                                        <div class="tip rounded rounded-3 d-flex align-items-center gap-3 p-3 mb-3">
+                                            <div
+                                                class="icon rounded rounded-circle d-flex align-items-center justify-content-center">
+                                                <i class="fa-solid fa-check fs-12"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p class="fw-semibold m-0">Lorem ipsum dolor sit.</p>
+                                            </div>
+                                        </div>
+                                        <div class="tip rounded rounded-3 d-flex align-items-center gap-3 p-3 mb-3">
+                                            <div
+                                                class="icon rounded rounded-circle d-flex align-items-center justify-content-center">
+                                                <i class="fa-solid fa-check fs-12"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p class="fw-semibold m-0">Lorem ipsum dolor sit.</p>
+                                            </div>
+                                        </div>
+                                        <div class="tip rounded rounded-3 d-flex align-items-center gap-3 p-3 mb-3">
+                                            <div
+                                                class="icon rounded rounded-circle d-flex align-items-center justify-content-center">
+                                                <i class="fa-solid fa-check fs-12"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p class="fw-semibold m-0">Lorem ipsum dolor sit.</p>
+                                            </div>
+                                        </div>
+                                        <div class="tip rounded rounded-3 d-flex align-items-center gap-3 p-3 mb-3">
+                                            <div
+                                                class="icon rounded rounded-circle d-flex align-items-center justify-content-center">
+                                                <i class="fa-solid fa-check fs-12"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p class="fw-semibold m-0">Lorem ipsum dolor sit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
