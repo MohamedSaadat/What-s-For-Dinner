@@ -268,8 +268,6 @@ main .tab-pane {
   scrollbar-width: thin;
   scrollbar-color: #ff813e #ffedd4;
 }
-main .tab-pane.active {
-}
 /* Ingredients */
 main .Ingredients .number {
   width: 24px;
