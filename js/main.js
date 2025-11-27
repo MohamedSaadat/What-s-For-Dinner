@@ -278,14 +278,14 @@ var dinnerMealRecipes = [
       "Let dough rest properly for best texture",
     ],
   },
-  // French Onion Soup
+  // Teriyaki Chicken Bowl
   {
-    name: "French Onion Soup",
-    description: "Rich beef broth with caramelized onions and melted cheese",
-    image: "images/French Onion Soup.jpg",
-    category: "Mediterranean",
-    level: "Intermediate",
-    require45min: true,
+    name: "Teriyaki Chicken Bowl",
+    description: "Sweet and savory chicken over rice with vegetables",
+    image: "images/Teriyaki Chicken Bowl.jpg",
+    category: "Asian",
+    level: "Easy",
+    require45min: false,
     rating: 4.7,
     reviews: 267,
     prepTime: 15,
@@ -324,11 +324,11 @@ var dinnerMealRecipes = [
       "Watch carefully when broiling to avoid burning",
     ],
   },
-  // Creamy Spaghetti Carbonara
+  // Caprese Sandwich
   {
-    name: "Creamy Spaghetti Carbonara",
-    description: "A classic Italian pasta dish with eggs, cheese, and pancetta",
-    image: "images/Creamy Spaghetti Carbonara.jpg",
+    name: "Caprese Sandwich",
+    description: "Fresh Italian sandwich with mozzarella, tomato, and basil",
+    image: "images/Caprese Sandwich.jpg",
     category: "Italian",
     level: "Easy",
     require45min: false,
@@ -370,13 +370,13 @@ var dinnerMealRecipes = [
       "Never add cream - authentic carbonara is made with eggs only",
     ],
   },
-  // Thai Green Curry
+  // Caesar Salad
   {
-    name: "Thai Green Curry",
-    description: "Vibrant and aromatic curry with vegetables and coconut milk",
-    image: "images/Thai Green Curry.jpg",
-    category: "Asian",
-    level: "Intermediate",
+    name: "Caesar Salad",
+    description: "Classic salad with crispy romaine and creamy dressing",
+    image: "images/Caesar Salad.jpg",
+    category: "Mediterranean",
+    level: "Easy",
     require45min: false,
     rating: 4.7,
     reviews: 312,
@@ -417,12 +417,12 @@ var dinnerMealRecipes = [
       "Use full-fat coconut milk for richest, creamiest sauce",
     ],
   },
-  // Margherita Pizza
+  // Pad Thai
   {
-    name: "Margherita Pizza",
-    description: "Classic Italian pizza with fresh mozzarella and basil",
-    image: "images/Margherita Pizza.jpg",
-    category: "Italian",
+    name: "Pad Thai",
+    description: "Popular Thai stir-fried noodles with shrimp and peanuts",
+    image: "images/Pad Thai.jpg",
+    category: "Asian",
     level: "Intermediate",
     require45min: true,
     rating: 4.9,
@@ -463,14 +463,14 @@ var dinnerMealRecipes = [
       "Let dough rest properly for best texture",
     ],
   },
-   // Shrimp Scampi
+   // Mediterranean Quinoa Bowl
   {
-    name: "Shrimp Scampi",
-    description: "Garlicky shrimp in white wine butter sauce",
-    image: "images/Shrimp Scampi.jpg",
-    category: "Seafood",
+    name: "Mediterranean Quinoa Bowl",
+    description: "Healthy bowl with quinoa, vegetables, and tahini dressing",
+    image: "images/Mediterranean Quinoa Bowl.jpg",
+    category: "Mediterranean",
     level: "Easy",
-    require45min: false,
+    require45min: true,
     rating: 4.8,
     reviews: 356,
     prepTime: 10,
@@ -532,7 +532,7 @@ function properties(randomNumberValue) {
   `;
   // image
   document.getElementById("recipeImage").innerHTML = `
-        <img class="h-100" src="${dinnerMealRecipes[randomNumberValue].image}" alt="">
+        <img src="${dinnerMealRecipes[randomNumberValue].image}" alt="">
     `;
   // category
   document.getElementById(

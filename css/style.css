@@ -61,6 +61,9 @@ body::selection {
 /* --------------------------- tags ------------------------------- */
 img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 80%;
 }
 /* ----------------------------------------------------------------- */
 /* -------------------------- spatial class ------------------------- */
@@ -173,11 +176,15 @@ main .row[class="row bg-white rounded rounded-5"] {
   box-shadow: 0 10px 15px 0px #8080803d;
 }
 /* image */
-main div[class="position-relative h-100"] .rounded-pill{
+main div[class="position-relative"],
+main .image {
+  height: 100%;
+}
+main div[class="position-relative"] .rounded-pill {
   top: 32px;
   left: 32px;
 }
-main .info{
+main .info {
   width: 90%;
   bottom: 20px;
   left: 50%;
@@ -186,9 +193,6 @@ main .info{
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-}
-main .image img{
-  object-fit: cover;
 }
 /* content */
 main span[class*="rounded-pill"] {

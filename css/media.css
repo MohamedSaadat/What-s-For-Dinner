@@ -47,12 +47,18 @@
   main .nav.nav-tabs {
     gap: 0;
   }
-}
-@media (max-width: 992px) {
-  main .content div[class="d-flex align-items-center justify-content-between"]{
+  main .content div[class="d-flex align-items-center justify-content-between"] {
     flex-direction: column-reverse;
     gap: 16px;
     margin-top: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  img {
+    /* object-position: 50% 50%; */
+  }
+  main div[class="p-0 col-12 col-xl-4"] {
+    height: 500px;
   }
 }
 /* ----------------------------------------------------------------- */
