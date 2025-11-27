@@ -44,5 +44,15 @@
   .navbar-collapse .navbar-nav .nav-item:nth-child(4):after {
     display: block;
   }
+  main .nav.nav-tabs {
+    gap: 0;
+  }
+}
+@media (max-width: 992px) {
+  main .content div[class="d-flex align-items-center justify-content-between"]{
+    flex-direction: column-reverse;
+    gap: 16px;
+    margin-top: 16px;
+  }
 }
 /* ----------------------------------------------------------------- */
