@@ -681,8 +681,8 @@ function chefsTips(randomNumberValue) {
   document.getElementById("chefsTips").innerHTML = chefsTipsTab;
 }
 // /*---------------------- calling -----------------------*/
-test();
-function test() {
+anotherRecipe();
+function anotherRecipe() {
   var randomNumberValue = randomNumber();
   properties(randomNumberValue);
   ingredients(randomNumberValue);
