@@ -463,7 +463,7 @@ var dinnerMealRecipes = [
       "Let dough rest properly for best texture",
     ],
   },
-   // Mediterranean Quinoa Bowl
+  // Mediterranean Quinoa Bowl
   {
     name: "Mediterranean Quinoa Bowl",
     description: "Healthy bowl with quinoa, vegetables, and tahini dressing",
@@ -521,7 +521,6 @@ function randomNumber() {
 
 // properties
 function properties(randomNumberValue) {
-
   // name
   document.getElementById("name").innerHTML = `
     ${dinnerMealRecipes[randomNumberValue].name}
@@ -682,10 +681,19 @@ function chefsTips(randomNumberValue) {
   document.getElementById("chefsTips").innerHTML = chefsTipsTab;
 }
 // /*---------------------- calling -----------------------*/
-var randomNumberValue = randomNumber();
-properties(randomNumberValue);
-ingredients(randomNumberValue);
-instructions(randomNumberValue);
-nutrition(randomNumberValue);
-chefsTips(randomNumberValue);
-document.getElementById("randomNumberButton").addEventListener("click", randomNumber);
+test();
+function test() {
+  var randomNumberValue = randomNumber();
+  properties(randomNumberValue);
+  ingredients(randomNumberValue);
+  instructions(randomNumberValue);
+  nutrition(randomNumberValue);
+  chefsTips(randomNumberValue);
+  document
+    .getElementById("randomNumberButton")
+    .addEventListener("click", randomNumber);
+    console.log("kk");
+    
+}
+
+
