@@ -692,8 +692,6 @@ function anotherRecipe() {
   document
     .getElementById("randomNumberButton")
     .addEventListener("click", randomNumber);
-    console.log("kk");
-    
 }
 
 
