@@ -1,6 +1,6 @@
 // /*---------------------- All Recipes -----------------------*/
 var dinnerMealRecipes = [
-  // Shrimp Scampi
+  // 0-Shrimp Scampi
   {
     name: "Shrimp Scampi",
     description: "Garlicky shrimp in white wine butter sauce",
@@ -47,7 +47,7 @@ var dinnerMealRecipes = [
       "Add extra lemon for bright, fresh taste",
     ],
   },
-  // Honey Garlic Salmon
+  // 1-Honey Garlic Salmon
   {
     name: "Honey Garlic Salmon",
     description: "Pan-seared salmon with a sweet and savory glaze",
@@ -93,7 +93,7 @@ var dinnerMealRecipes = [
       "Pair with steamed broccoli or asparagus for a complete meal",
     ],
   },
-  // French Onion Soup
+  // 2-French Onion Soup
   {
     name: "French Onion Soup",
     description: "Rich beef broth with caramelized onions and melted cheese",
@@ -139,7 +139,7 @@ var dinnerMealRecipes = [
       "Watch carefully when broiling to avoid burning",
     ],
   },
-  // Creamy Spaghetti Carbonara
+  // 3-Creamy Spaghetti Carbonara
   {
     name: "Creamy Spaghetti Carbonara",
     description: "A classic Italian pasta dish with eggs, cheese, and pancetta",
@@ -185,7 +185,7 @@ var dinnerMealRecipes = [
       "Never add cream - authentic carbonara is made with eggs only",
     ],
   },
-  // Thai Green Curry
+  // 4-Thai Green Curry
   {
     name: "Thai Green Curry",
     description: "Vibrant and aromatic curry with vegetables and coconut milk",
@@ -232,7 +232,7 @@ var dinnerMealRecipes = [
       "Use full-fat coconut milk for richest, creamiest sauce",
     ],
   },
-  // Margherita Pizza
+  // 5-Margherita Pizza
   {
     name: "Margherita Pizza",
     description: "Classic Italian pizza with fresh mozzarella and basil",
@@ -278,7 +278,7 @@ var dinnerMealRecipes = [
       "Let dough rest properly for best texture",
     ],
   },
-  // Teriyaki Chicken Bowl
+  // 6-Teriyaki Chicken Bowl
   {
     name: "Teriyaki Chicken Bowl",
     description: "Sweet and savory chicken over rice with vegetables",
@@ -324,7 +324,7 @@ var dinnerMealRecipes = [
       "Watch carefully when broiling to avoid burning",
     ],
   },
-  // Caprese Sandwich
+  // 7-Caprese Sandwich
   {
     name: "Caprese Sandwich",
     description: "Fresh Italian sandwich with mozzarella, tomato, and basil",
@@ -370,7 +370,7 @@ var dinnerMealRecipes = [
       "Never add cream - authentic carbonara is made with eggs only",
     ],
   },
-  // Caesar Salad
+  // 8-Caesar Salad
   {
     name: "Caesar Salad",
     description: "Classic salad with crispy romaine and creamy dressing",
@@ -417,7 +417,7 @@ var dinnerMealRecipes = [
       "Use full-fat coconut milk for richest, creamiest sauce",
     ],
   },
-  // Pad Thai
+  // 9-Pad Thai
   {
     name: "Pad Thai",
     description: "Popular Thai stir-fried noodles with shrimp and peanuts",
@@ -463,7 +463,7 @@ var dinnerMealRecipes = [
       "Let dough rest properly for best texture",
     ],
   },
-  // Mediterranean Quinoa Bowl
+  // 10-Mediterranean Quinoa Bowl
   {
     name: "Mediterranean Quinoa Bowl",
     description: "Healthy bowl with quinoa, vegetables, and tahini dressing",
@@ -513,12 +513,16 @@ var dinnerMealRecipes = [
 ];
 
 // /*---------------------- functions -----------------------*/
-// // button
+// button
+var lastIndex;
 function randomNumber() {
-  var randomNumber = Math.round(Math.random() * 10);
+  var randomNumber = Math.round(Math.random() * dinnerMealRecipes.length);
+  while (randomNumber === lastIndex) {
+    randomNumber = Math.round(Math.random() * dinnerMealRecipes.length);
+  }
+  lastIndex = randomNumber;
   return randomNumber;
 }
-
 // properties
 function properties(randomNumberValue) {
   // name
@@ -683,15 +687,14 @@ function chefsTips(randomNumberValue) {
 // /*---------------------- calling -----------------------*/
 anotherRecipe();
 function anotherRecipe() {
+  randomNumber();
   var randomNumberValue = randomNumber();
   properties(randomNumberValue);
   ingredients(randomNumberValue);
   instructions(randomNumberValue);
   nutrition(randomNumberValue);
   chefsTips(randomNumberValue);
-  document
-    .getElementById("randomNumberButton")
-    .addEventListener("click", randomNumber);
 }
-
-
+document
+  .getElementById("randomNumberButton")
+  .addEventListener("click", randomNumber);
